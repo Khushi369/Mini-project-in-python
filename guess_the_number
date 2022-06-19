@@ -1,0 +1,22 @@
+import random
+random_num = random.randint(1,100)
+t = 0
+while True:
+    t += 1
+    guess = input("make a guess : ")
+    if guess.isdigit():
+        guess = int(guess)
+    else:
+        print("try again. ")
+        continue
+
+    if guess == random_num:
+        print("Yay!!")
+        break
+    else:
+        if guess> random_num:
+            print("you were above the number")
+        else:
+            print("you were below the number")
+
+print("You got it in ",t," guesses")
